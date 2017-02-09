@@ -1,0 +1,58 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>html5新增的语义标签 | Lupan's Blog</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">html5新增的语义标签</h1><a id="logo" href="/.">Lupan's Blog</a><p class="description">Front End Engineer</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">html5新增的语义标签</h1><div class="post-meta">Mar 5, 2016<span> | </span><span class="category"><a href="/categories/HTML5/">HTML5</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="clear"><div id="toc" class="toc-article"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#新增语义标签部分"><span class="toc-number">1.</span> <span class="toc-text">新增语义标签部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#兼容性处理"><span class="toc-number">2.</span> <span class="toc-text">兼容性处理</span></a></li></ol></div></div><div class="post-content"><p>内容：html5新增的语义标签、新标签的兼容性处理。<br><a id="more"></a></p>
+<h2 id="新增语义标签部分"><a href="#新增语义标签部分" class="headerlink" title="新增语义标签部分"></a>新增语义标签部分</h2><p>html5的新语义标签跟div非常类似，使用新语义标签能够有效避免命名冲突问题</p>
+<p><em>注意事项：</em></p>
+<ol>
+<li>main标签在IE中不支持</li>
+<li>IE8及IE8以下不支持新增的标签，但支持js动态创建的（必须把创建的元素设置为display:block ）</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>header</td>
+<td>头部</td>
+</tr>
+<tr>
+<td>main</td>
+<td>主体部分</td>
+</tr>
+<tr>
+<td>footer</td>
+<td>底部</td>
+</tr>
+<tr>
+<td>nav</td>
+<td>导航</td>
+</tr>
+<tr>
+<td>aside</td>
+<td>主体内容之外</td>
+</tr>
+<tr>
+<td>article</td>
+<td>文档</td>
+</tr>
+<tr>
+<td>section</td>
+<td>文档中的节</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">header</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">nav</span>&gt;</span><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">header</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">main</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">aside</span>&gt;</span><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">article</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">section</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">section</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">section</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">article</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">main</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">footer</span>&gt;</span><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="兼容性处理"><a href="#兼容性处理" class="headerlink" title="兼容性处理"></a>兼容性处理</h2><p><strong>第一种方法：</strong></p>
+<p>使用js动态创建新增的标签</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 生成[if lte IE 8]的emmpty语法：cc:ie6 + tab --&gt;</span></div><div class="line"><span class="comment">&lt;!--[if lte IE 8]&gt;</span></div><div class="line">  &lt;script&gt;</div><div class="line">    var headerDom = document.createElement('header');</div><div class="line">    document.body.appendChild(headerDom);</div><div class="line">    headerDom.style.display = 'block';</div><div class="line">    console.log('我调用了');</div><div class="line">  &lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<p><strong>第二种方法：</strong></p>
+<p>使用js库(html5shiv.min.js)实现语义标签的兼容性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 通过条件注释让,这个js文件在指定的 IE版本中 才被加载  --&gt;</span></div><div class="line"><span class="comment">&lt;!--[if lte IE 8]&gt;</span></div><div class="line">  &lt;script src='js/html5shiv.min.js'&gt;&lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<p>其他知识：</p>
+<ol>
+<li>生成[if lte IE 8]的emmpty语法：cc:ie6 + tab</li>
+<li>Lorem + tab 生成占位文字，如果要生成多个则Lorem1000 + tab</li>
+</ol>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2016/03/05/6.1-HTML5新增语义标签/" data-id="ciywwkwc600059bso4d7qo9hf" class="article-share-link">分享到</a><div class="tags"></div><div class="post-nav"><a href="/2016/03/06/6.3-css3的动画属性/" class="pre">css3的动画属性</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML5/">HTML5</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/移动web/">移动web</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/7.2-touch事件/">touch事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/17/7.1-viewport视觉窗口/">viewport视觉窗口</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/15/6.6-HTML5新增API/">html5新增API</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/06/6.3-css3的动画属性/">css3的动画属性</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/03/05/6.1-HTML5新增语义标签/">html5新增的语义标签</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Lupan's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
