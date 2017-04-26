@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>http服务介绍和网络基础 | Lupan's Blog</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">http服务介绍和网络基础</h1><a id="logo" href="/.">Lupan's Blog</a><p class="description">Front End Engineer</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">http服务介绍和网络基础</h1><div class="post-meta">Jun 1, 2016<span> | </span><span class="category"><a href="/categories/ajax/">ajax</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="clear"><div id="toc" class="toc-article"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、服务器"><span class="toc-number">1.</span> <span class="toc-text">1、服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1、服务器类型"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.1、服务器类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2、服务器软件"><span class="toc-number">1.0.2.</span> <span class="toc-text">1.2、服务器软件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3、HTTP服务器"><span class="toc-number">1.0.3.</span> <span class="toc-text">1.3、HTTP服务器</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2、客户端"><span class="toc-number">2.</span> <span class="toc-text">2、客户端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3、网络基础"><span class="toc-number">3.</span> <span class="toc-text">3、网络基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-IP地址"><span class="toc-number">3.0.1.</span> <span class="toc-text">3.1 IP地址</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2、域名"><span class="toc-number">3.0.2.</span> <span class="toc-text">3.2、域名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3、DNS服务"><span class="toc-number">3.0.3.</span> <span class="toc-text">3.3、DNS服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4、端口"><span class="toc-number">3.0.4.</span> <span class="toc-text">3.4、端口</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4、软件架构"><span class="toc-number">4.</span> <span class="toc-text">4、软件架构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1、C-S结构"><span class="toc-number">4.0.1.</span> <span class="toc-text">4.1、C/S结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2、B-S结构"><span class="toc-number">4.0.2.</span> <span class="toc-text">4.2、B/S结构</span></a></li></ol></li></ol></li></ol></div></div><div class="post-content"><p>内容：服务器介绍、网络基础、软件架构<br><a id="more"></a></p>
+<h2 id="1、服务器"><a href="#1、服务器" class="headerlink" title="1、服务器"></a>1、服务器</h2><blockquote>
+<p>前言：通俗的讲，能够提供某种服务的机器（计算机）称为服务器</p>
+</blockquote>
+<h4 id="1-1、服务器类型"><a href="#1-1、服务器类型" class="headerlink" title="1.1、服务器类型"></a>1.1、服务器类型</h4><p>按照不同的划分标准，服务可划分为以下类型：</p>
+<ol>
+<li>按<strong>服务类型</strong>可分为：文件服务器、数据库服务器、邮件服务器、Web服务器等；</li>
+<li>按<strong>操作系统</strong>可分为：Linux服务器、Windows服务器等；</li>
+<li>按<strong>应用软件</strong>可分为 Apache服务器、Nginx 服务器、IIS服务器、Tomcat服务器、<br>weblogic服务器、WebSphere服务器、boss服务器、 Node服务器等；</li>
+</ol>
+<h4 id="1-2、服务器软件"><a href="#1-2、服务器软件" class="headerlink" title="1.2、服务器软件"></a>1.2、服务器软件</h4><p>使计算机具备提供某种服务能力的应用软件，称为服务器软件，<br>通过安装相应的服务软件，然后进行配置后就可以使计算具备了提供某种服务的能力。</p>
+<p>常见的服务器软件有：</p>
+<ol>
+<li>文件服务器：Server-U、FileZilla、VsFTP等（FTP是File Transfer Protocol文件传输协议）；</li>
+<li>数据库服务器：oracle、mysql、SQL server、DB2、ACCESS等；</li>
+<li>邮件服务器：Postfix、Sendmail等；</li>
+<li><strong>HTTP服务器</strong>：Apache、Nginx、IIS、Tomcat、NodeJS等；</li>
+</ol>
+<h4 id="1-3、HTTP服务器"><a href="#1-3、HTTP服务器" class="headerlink" title="1.3、HTTP服务器"></a>1.3、HTTP服务器</h4><p>即网站服务器，主要提供文档(文本、图片、视频、音频)浏览服务，一般安装Apache、Nginx服务器软件。</p>
+<p>HTTP服务器可以结合某一编程语言处理业务逻辑，由此进行的开发，通常称之为<strong>服务端开发</strong>。 </p>
+<p>常见的运行在服务端的编程语言包括 php、java、.net、Python、Ruby、Perl等。  </p>
+<h2 id="2、客户端"><a href="#2、客户端" class="headerlink" title="2、客户端"></a>2、客户端</h2><p>具有向服务器<strong>索取服务</strong>能力的终端，如比如 手机、电脑等，通过安装不同的客户端软件，<br>可以获取不同的服务，比如通过QQ获得即时通讯服务、通过迅雷获得下载服务等。</p>
+<p>常见的客户端软件：浏览器、QQ、迅雷、Foxmail等。</p>
+<p>以浏览器为宿主环境，结合 HTML、CSS、Javascript等技术，而进行的一系列开发，通常称之为<strong>前端开发</strong>。</p>
+<h2 id="3、网络基础"><a href="#3、网络基础" class="headerlink" title="3、网络基础"></a>3、网络基础</h2><h4 id="3-1-IP地址"><a href="#3-1-IP地址" class="headerlink" title="3.1 IP地址"></a>3.1 IP地址</h4><p>所谓IP地址就是给每个连接在互联网上的主机分配的一个32位地址。(就像每部手机能正常通话需要一个号码一样)</p>
+<p>查看本机IP地址 ping、ipconfig、ifconfig（linux）</p>
+<p><strong>ip分为两种类型:</strong></p>
+<ol>
+<li>局域网ip</li>
+</ol>
+<p>ip是交换机或者路由器去分配，指在某一区域内由多台计算机互联成的计算机组</p>
+<ol>
+<li>公网IP</li>
+</ol>
+<p>一般需要去电信申请，需要营业执照</p>
+<h4 id="3-2、域名"><a href="#3-2、域名" class="headerlink" title="3.2、域名"></a>3.2、域名</h4><p>由于IP地址基于数字，不方便记忆，于是便用域名来代替IP地址，域名是一个IP地址的“面具”  </p>
+<p>查看域名对应的IP地址 ping</p>
+<p><strong>域名有对应的类型：</strong></p>
+<p>com、net、com、cn、gov</p>
+<p>一个域名下面可以配置多个二级域名</p>
+<p>域名需要申请注册，申请注册了之后需要备案的，去万网申请（被阿里云收购了）</p>
+<p>域名如果要使用，需要去工商局备案，时间一般为一周左右，有些网站可以通过ip访问，但是这些网站都是一些灰色的网站。</p>
+<h4 id="3-3、DNS服务"><a href="#3-3、DNS服务" class="headerlink" title="3.3、DNS服务"></a>3.3、DNS服务</h4><p>DNS（Domain Name System）因特网上作为域名和IP地址相互映射的一个分布式数据库，<br>能够使用户更方便的访问互联网，而不用去记住能够被机器直接读取的IP数串。</p>
+<p>简单的说就是记录IP地址和域名之间对应关系的服务。</p>
+<p>查找优先级 本机hosts文件、DNS服务器</p>
+<p>ipconfig /flushdns 刷新DNS</p>
+<p>域名系统，作用是进行域名管理、域名解析。</p>
+<p>假设通过域名访问，首先进入dns，dns服务器得到你的域名后，会根据你的域名去查找对应的ip。</p>
+<h4 id="3-4、端口"><a href="#3-4、端口" class="headerlink" title="3.4、端口"></a>3.4、端口</h4><p>假设我的计算机要对外提供服务，必须占用一个端口对外提供服务，一台计算机可以对外提供多个服务，只要占用的端口不一样即可，端口号是计算机与外界通讯交流的出口，每个端口对应不同的服务。</p>
+<p><em>现实生活中，银行不同的窗口办理不同的业务。</em></p>
+<p>查看端口占用情况 netstat -an</p>
+<p>常见端口号 80、8080、3306、21、22</p>
+<ol>
+<li>web对外提供web服务，端口默认是80</li>
+<li>mysql对外提供数据库服务，端口默认是3306</li>
+</ol>
+<h2 id="4、软件架构"><a href="#4、软件架构" class="headerlink" title="4、软件架构"></a>4、软件架构</h2><h4 id="4-1、C-S结构"><a href="#4-1、C-S结构" class="headerlink" title="4.1、C/S结构"></a>4.1、C/S结构</h4><p>即<strong>C</strong>lient、<strong>S</strong>erver</p>
+<p>C/S工作流程图<br><img src="images/8-1/CS工作流程图.png" alt="alt_text"><br>在C/S结构的情况下，不同的服务需要安装不同的客户端软件，</p>
+<p>比如QQ、迅雷、Foxmail这种情况下安装的软件会越来越多，同时也有许多弊端，</p>
+<p>比如A出差，需要在B电脑上查收邮件，但是B电脑并未安装Foxmail等类似的客户端软件，</p>
+<p>这样不得不先去下载Foxmail，非常不方便。</p>
+<h4 id="4-2、B-S结构"><a href="#4-2、B-S结构" class="headerlink" title="4.2、B/S结构"></a>4.2、B/S结构</h4><p>B/S（即<strong>B</strong>roswer、<strong>S</strong>erver）解决了C/S所带来的不便，</p>
+<p>将所有的服务都可以通过浏览器来完成（因为基本所有浏览器都安装了浏览器），</p>
+<p>但B/S也有一些不利，比如操作稳定性、流畅度等方面相对较弱。</p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2016/06/01/8.1-http服务介绍和网络基础/" data-id="cizf8y5k400006hsoscoktsw8" class="article-share-link">分享到</a><div class="tags"></div><div class="post-nav"><a href="/2016/06/13/8.1-wamp的配置/" class="pre">wamp的配置</a><a href="/2016/03/18/7.3-媒体查询/" class="next">媒体查询</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML5/">HTML5</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/canvas/">canvas</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/其他未做分类/">其他未做分类</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/移动web/">移动web</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/9.7-经典面试题/">经典面试题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/03/9.1-面向对象/">js面向对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/02/9.1-this不同的场景/">this的不同场景</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/02/9.2-原型链/">原型链</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/01/9.2-继承 /">原型继承与组合继承</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/27/9.1-判断属性是否存在/">判断属性是否存在</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/26/9.1-数据类型/">js的数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/9.5-闭包/">闭包</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/9.4-数组与类数组/">数组与类数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/9.5-预解析/">预解析</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Lupan's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

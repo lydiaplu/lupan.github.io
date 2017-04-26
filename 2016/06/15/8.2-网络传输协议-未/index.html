@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description"><title>网络传输协议—转 | Lupan's Blog</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">网络传输协议—转</h1><a id="logo" href="/.">Lupan's Blog</a><p class="description">Front End Engineer</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">网络传输协议—转</h1><div class="post-meta">Jun 15, 2016<span> | </span><span class="category"><a href="/categories/ajax/">ajax</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="clear"><div id="toc" class="toc-article"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#网络传输协议"><span class="toc-number">1.</span> <span class="toc-text">网络传输协议</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、常见协议"><span class="toc-number">1.0.1.</span> <span class="toc-text">1、常见协议</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、http协议"><span class="toc-number">1.0.2.</span> <span class="toc-text">2、http协议</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1、请求和请求报文"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">2.1、请求和请求报文</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2、-响应和响应报文"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">2.2、 响应和响应报文</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、拦截浏览器与服务器端的通讯"><span class="toc-number">1.0.3.</span> <span class="toc-text">3、拦截浏览器与服务器端的通讯</span></a></li></ol></li></ol></li></ol></div></div><div class="post-content"><p>内容：网络传输协议、http协议、请求与响应的介绍<br><a id="more"></a></p>
+<h2 id="网络传输协议"><a href="#网络传输协议" class="headerlink" title="网络传输协议"></a>网络传输协议</h2><h4 id="1、常见协议"><a href="#1、常见协议" class="headerlink" title="1、常见协议"></a>1、常见协议</h4><p>1、HTTP、HTTPS 超文本传输协议 </p>
+<p>2、FTP 文件传输协议</p>
+<p>3、SMTP 简单邮件传输协议</p>
+<h4 id="2、http协议"><a href="#2、http协议" class="headerlink" title="2、http协议"></a>2、http协议</h4><p>超文本传输协议（HTTP，HyperText Transfer Protocol) 网站是基于HTTP协议的，<br>例如网站的图片、CSS、JS等都是基于HTTP协议进行传输的。</p>
+<p>HTML  Hypertext Markup Language</p>
+<p>HTTP协议是由从客户机到服务器的请求(Request)和从服务器到客户机的响应(Response)进行了约束和规范。</p>
+<p>即HTTP协议主要由请求和响应构成。</p>
+<p><img src="images/8-2/HTTP协议.png" alt=""></p>
+<p>常用请求方法 <strong>POST</strong>、<strong>GET</strong>、PUT、DELETE</p>
+<p>我们通过浏览器插件 FireFox httpFox  调试。ctrl shift f2 调用</p>
+<h5 id="2-1、请求和请求报文"><a href="#2-1、请求和请求报文" class="headerlink" title="2.1、请求和请求报文"></a>2.1、请求和请求报文</h5><p>请求由客户端发起，其规范格式为：请求行、请求头、请求主体。</p>
+<ul>
+<li><strong>1、请求行</strong></li>
+</ul>
+<p>由请求方式、请求URL和协议版本构成</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">GET</span> <span class="string">/day01/code/login.php?username=123&amp;password=123</span> HTTP/1.1</div></pre></td></tr></table></figure>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">POST</span> <span class="string">/day01/code/login.php</span> HTTP/1.1</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>2、请求头</strong></li>
+</ul>
+<p>Host：localhost请求的主机</p>
+<p>Cache-Control：max-age=0 控制缓存</p>
+<p>Origin: 请求的站点的主域名</p>
+<p>Accept：<em>/</em> 接受的文档MIME类型，告诉服务器可以接收哪些数据格式</p>
+<p>User-Agent：告诉服务器，客户端浏览器的版本，操作系统的版本，很重要</p>
+<p>Referer：从哪个URL跳转过来的</p>
+<p>Accept-Encoding：接收的压缩格式</p>
+<p>Accept-Language：接收的语言</p>
+<p>If-None-Match：记录服务器响应的ETag值，用于控制缓存</p>
+<p>此值是由服务器自动生成的</p>
+<p>If-Modified-Since：记录服务器响应的Last-Modified值</p>
+<p>此值是由服务器自动生成的</p>
+<ul>
+<li><strong>3、请求主体</strong></li>
+</ul>
+<p>即传递给服务端的数据，如果发送到服务器的数据有中文，则将中文编码，服务器得到数据会自动解码。</p>
+<p>注：当以post形式提交表单的时候，请求头里会设置</p>
+<p>Content-Type: application/x-www-form-urlencoded，以get形式当不需要</p>
+<h5 id="2-2、-响应和响应报文"><a href="#2-2、-响应和响应报文" class="headerlink" title="2.2、 响应和响应报文"></a>2.2、 响应和响应报文</h5><p>响应由服务器发出，其规范格式为：状态行、响应头、响应主体。</p>
+<ul>
+<li><strong>1、状态行</strong></li>
+</ul>
+<p>由协议版本号、状态码和状态信息构成</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 <span class="number">200</span> OK</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>2、响应头</strong></li>
+</ul>
+<p>Date：响应时间</p>
+<p>Server：服务器信息</p>
+<p>Last-Modified：资源最后修改时间 由服务器自动生成</p>
+<p>ETag：资源修改后生成的唯一标识</p>
+<p>由服务器自动生成</p>
+<p>Content-Length：响应主体长度</p>
+<p>Content-Type：响应资源的类型</p>
+<ul>
+<li><strong>3、响应主体</strong></li>
+</ul>
+<p>即服务端返回给客户端的内容；</p>
+<ul>
+<li>状态码</li>
+</ul>
+<p>常见的有如下：</p>
+<p>200代表成功、</p>
+<p>302请求重定向、</p>
+<p>304文档未修改（请求的资源没有发生改变，浏览器从缓存中去获取）、</p>
+<p>403没有权限、</p>
+<p>405请求的方式不支持、</p>
+<p>404未找到、</p>
+<p>500服务器错误</p>
+<p><img src="images/8-2/get请求.png" alt=""><br><img src="images/8-2/post请求.png" alt=""></p>
+<h4 id="3、拦截浏览器与服务器端的通讯"><a href="#3、拦截浏览器与服务器端的通讯" class="headerlink" title="3、拦截浏览器与服务器端的通讯"></a>3、拦截浏览器与服务器端的通讯</h4><p>我们要拦截客户端浏览器与服务器端进行通讯的数据格式，这个时候我们需要安装一个抓包工具Charles</p>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2016/06/15/8.2-网络传输协议-未/" data-id="cizf8y5kn00056hsotens9rz1" class="article-share-link">分享到</a><div class="tags"></div><div class="post-nav"><a href="/2016/06/30/8.4-跨域解决方案/" class="pre">跨域解决方案</a><a href="/2016/06/13/8.1-wamp的配置/" class="next">wamp的配置</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://yoursite.com"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HTML5/">HTML5</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/ajax/">ajax</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/canvas/">canvas</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/javascript/">javascript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/其他未做分类/">其他未做分类</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/移动web/">移动web</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/15/9.7-经典面试题/">经典面试题</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/03/9.1-面向对象/">js面向对象</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/02/9.1-this不同的场景/">this的不同场景</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/02/9.2-原型链/">原型链</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/01/9.2-继承 /">原型继承与组合继承</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/27/9.1-判断属性是否存在/">判断属性是否存在</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/26/9.1-数据类型/">js的数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/9.5-闭包/">闭包</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/9.4-数组与类数组/">数组与类数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/24/9.5-预解析/">预解析</a></li></ul></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">Lupan's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
